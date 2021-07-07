@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/tv_desc"
+            style="@style/TextViewPeminjaman"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Upload foto atau dokumen bukti pembayaran yang jelas"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_desc_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Ketentuan pembayaran:\n 1. Pembayaran ditransfer ke rekening 87574965 (BCA) atas nama Irwan \n 2. Bukti pembayaran dapat berupa foto beresolusi minimal 800x800 atau pdf \n 3. Bukti pembayaran dapat ditolak apabila terdapat hal-hal yang tidak memenuhi syarat"
+            android:textAllCaps="false"
+            android:textColor="#757575"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+        <TextView
+            android:id="@+id/tv_bukti_head"
+            style="@style/TextViewPeminjaman"
+            android:layout_marginStart="0dp"
+            android:text="Bukti Pembayaran"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc_small" />
+
+        <TextView
+            android:id="@+id/tv_bukti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_gray"
+            android:padding="24dp"
+            android:paddingRight="60dp"
+            android:text="Upload Bukti Pembayaran"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_bukti_head" />
+
+        <Button
+            android:id="@+id/btn_bukti"
+            style="@style/ButtonTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:text="Pilih File"
+            app:layout_constraintBottom_toBottomOf="@id/tv_bukti"
+            app:layout_constraintEnd_toEndOf="@id/tv_bukti"
+            app:layout_constraintTop_toTopOf="@id/tv_bukti" />
+
+        <TextView
+            android:id="@+id/tv_nominal_bayar"
+            style="@style/TextViewPeminjaman"
+            android:layout_marginStart="0dp"
+            android:text="Nominal Bayar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_bukti" />
+
+        <EditText
+            android:id="@+id/et_nominal_bayar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_gray"
+            android:inputType="number"
+            android:padding="24dp"
+            android:paddingRight="60dp"
+            android:hint="Rp "
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nominal_bayar" />
+
+        <Button
+            android:id="@+id/btn_kirim"
+            style="@style/ButtonTheme"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="63dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="30dp"
+            android:text="Kirim"
+            app:layout_constraintTop_toBottomOf="@id/et_nominal_bayar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAFAFA">
+
+
+        <TextView
+            android:id="@+id/tv_nama_bank"
+            style="@style/TextViewPembayaran"
+            android:text="Nama Bank"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="12345678"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/et_nama_bank"
+            style="@style/EditTextCairkanSaldo"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_nama_bank"
+            app:layout_constraintStart_toStartOf="parent"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/tv_norek"
+            style="@style/TextViewPembayaran"
+            android:text="No. Rekening"
+            app:layout_constraintTop_toBottomOf="@id/et_nama_bank"
+            android:hint="12345678"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/et_norek"
+            style="@style/EditTextCairkanSaldo"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_norek"
+            app:layout_constraintStart_toStartOf="parent"
+            android:inputType="number"/>
+
+        <TextView
+            android:id="@+id/tv_nominal"
+            style="@style/TextViewPembayaran"
+            android:text="Nominal"
+            app:layout_constraintTop_toBottomOf="@id/et_norek"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/et_nominal"
+            style="@style/EditTextCairkanSaldo"
+            android:layout_marginTop="4dp"
+            android:hint="Rp"
+            app:layout_constraintTop_toBottomOf="@id/tv_nominal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/btn_ajukan_pencairan"
+            style="@style/ButtonTheme"
+            android:layout_marginTop="60dp"
+            android:text="Ajukan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_nominal" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
